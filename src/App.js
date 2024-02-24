@@ -32,7 +32,7 @@ function App() {
   const route = createBrowserRouter([
       {path:'', element: <Layout/>, children:[
         {path: '', element: <Navigate to={'home'}/>},
-        {path: 'ecommerce', element: <Navigate to={'/home'}/>},
+        {path: 'ecommerce', element: <AuthProtectedRoute><Login/></AuthProtectedRoute>},
         {path: 'login', element: <AuthProtectedRoute><Login/></AuthProtectedRoute>},
         {path: 'register', element: <AuthProtectedRoute><Register/></AuthProtectedRoute>},
         {path: 'forgetpassword', element: <AuthProtectedRoute><ForgetPassword/></AuthProtectedRoute>},
